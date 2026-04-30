@@ -1,0 +1,346 @@
+/* Autonomous Systems @ SJSU — site styles
+   Palette: SJSU Blue #0055A2, SJSU Gold #E5A823, Black #2E2D29 */
+
+:root {
+    --sjsu-blue: #0055A2;
+    --sjsu-blue-dark: #003C71;
+    --sjsu-gold: #E5A823;
+    --sjsu-gold-dark: #C99A00;
+    --ink: #2E2D29;
+    --muted: #6b6b6b;
+    --rule: #d8d8d8;
+    --bg: #ffffff;
+    --bg-soft: #f5f5f3;
+    --content-max: 1100px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-soft);
+    color: var(--ink);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 17px;
+    line-height: 1.55;
+}
+
+a {
+    color: var(--sjsu-blue);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s ease, border-color .15s ease;
+}
+a:hover {
+    color: var(--sjsu-gold-dark);
+    border-bottom-color: var(--sjsu-gold);
+}
+
+/* ---------- Header ---------- */
+.site-header {
+    background: var(--sjsu-blue);
+    color: #fff;
+    border-bottom: 4px solid var(--sjsu-gold);
+}
+.site-header .header-inner {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 22px 28px 18px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.site-header .brand-mark {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sjsu-gold);
+    border-right: 1px solid rgba(255,255,255,0.35);
+    padding-right: 22px;
+    line-height: 1.2;
+}
+.site-header .brand-mark span {
+    display: block;
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    margin-top: 2px;
+}
+.site-header .titles h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+.site-header .titles h1 a {
+    color: #fff;
+    border: none;
+}
+.site-header .titles h1 a:hover { color: var(--sjsu-gold); }
+.site-header .titles .pi {
+    margin-top: 4px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+.site-header .titles .pi a { color: #fff; border-bottom-color: rgba(255,255,255,0.4); }
+
+/* ---------- Navigation ---------- */
+.site-nav {
+    background: #fff;
+    border-bottom: 1px solid var(--rule);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+}
+.site-nav ul {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 0 28px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+}
+.site-nav li { margin: 0; }
+.site-nav a {
+    display: block;
+    padding: 14px 16px;
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+.site-nav a:hover {
+    color: var(--sjsu-blue);
+    border-bottom-color: var(--sjsu-gold);
+}
+.site-nav a.active {
+    color: var(--sjsu-blue);
+    border-bottom-color: var(--sjsu-blue);
+}
+
+/* ---------- Main content ---------- */
+main {
+    max-width: var(--content-max);
+    margin: 0 auto 48px;
+    background: #fff;
+    padding: 36px 44px 44px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+h2 {
+    color: var(--sjsu-blue);
+    font-size: 22px;
+    font-weight: 600;
+    margin: 32px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--sjsu-gold);
+}
+h2:first-child { margin-top: 0; }
+
+h3 {
+    color: var(--ink);
+    font-size: 17px;
+    font-weight: 600;
+    margin: 22px 0 8px;
+}
+
+p { margin: 0 0 14px; }
+
+ul, ol { padding-left: 22px; }
+li { margin-bottom: 8px; }
+
+hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 28px 0;
+}
+
+strong { font-weight: 600; }
+
+/* ---------- Profile block ---------- */
+.profile {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+.profile img {
+    width: 200px;
+    height: auto;
+    border: 1px solid var(--rule);
+    border-top: 4px solid var(--sjsu-gold);
+}
+.profile .meta { flex: 1; min-width: 0; }
+.profile .meta h2 {
+    margin-top: 0;
+    margin-bottom: 6px;
+    border: none;
+    padding: 0;
+    font-size: 26px;
+}
+.profile .meta .role {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 14px;
+}
+.profile .meta .role .institution { color: var(--sjsu-blue); font-weight: 600; }
+.profile .meta .contact { font-size: 14px; line-height: 1.7; }
+.profile .meta .contact .label {
+    display: inline-block;
+    width: 70px;
+    color: var(--muted);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+}
+
+/* ---------- Cards / callouts ---------- */
+.lab-tag {
+    display: inline-block;
+    background: var(--sjsu-gold);
+    color: var(--sjsu-blue-dark);
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.callout {
+    background: var(--bg-soft);
+    border-left: 4px solid var(--sjsu-gold);
+    padding: 14px 18px;
+    margin: 18px 0;
+}
+
+.placeholder {
+    color: var(--muted);
+    font-style: italic;
+    background: var(--bg-soft);
+    border: 1px dashed var(--rule);
+    padding: 18px 22px;
+    margin: 14px 0;
+}
+
+/* ---------- Publications list ---------- */
+.pub-list { list-style: none; padding-left: 0; }
+.pub-list li {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 0;
+}
+.pub-list li:last-child { border-bottom: none; }
+.pub-preview {
+    flex-shrink: 0;
+    width: 110px;
+    height: 80px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-soft);
+    border: 1px solid var(--rule);
+}
+.pub-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+.pub-preview.empty {
+    background: transparent;
+    border: none;
+}
+.pub-body { flex: 1; min-width: 0; }
+@media (max-width: 600px) {
+    .pub-preview { width: 80px; height: 60px; }
+}
+.pub-status {
+    display: inline-block;
+    background: var(--sjsu-blue);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    margin-right: 8px;
+    vertical-align: 1px;
+}
+.pub-status.accepted { background: var(--sjsu-gold-dark); }
+.pub-title { font-weight: 600; }
+.pub-venue { color: var(--muted); font-size: 14px; display: block; margin-top: 2px; }
+
+/* ---------- Student list ---------- */
+.student-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 12px 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 32px;
+}
+.student-list > li {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 0;
+}
+.student-list > li:last-child { border-bottom: 1px solid var(--rule); }
+@media (max-width: 720px) {
+    .student-list { grid-template-columns: 1fr; gap: 0; }
+    .student-list > li:last-child { border-bottom: none; }
+}
+.student-list img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border: 1px solid var(--rule);
+    flex-shrink: 0;
+}
+.student-list .student-info { font-size: 14px; line-height: 1.6; }
+.student-list .student-info .name {
+    font-weight: 600;
+    color: var(--sjsu-blue);
+    font-size: 16px;
+}
+.student-list .student-info .label {
+    color: var(--muted);
+    font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 18px 44px 32px;
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+    .site-header .header-inner { flex-direction: column; align-items: flex-start; gap: 12px; padding: 18px 20px; }
+    .site-header .brand-mark { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.3); padding: 0 0 10px; }
+    .site-nav ul { padding: 0 12px; }
+    .site-nav a { padding: 12px 10px; font-size: 12px; letter-spacing: 0.04em; }
+    main { padding: 24px 20px; margin-bottom: 24px; }
+    .profile { flex-direction: column; gap: 18px; }
+    .profile img { width: 160px; }
+}

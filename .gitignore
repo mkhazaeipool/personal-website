@@ -1,0 +1,14 @@
+# Editor / agent state
+.claude/
+.vscode/
+.idea/
+
+# OS / temp
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+*.tmp
+*.bak
+*.log
